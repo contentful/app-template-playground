@@ -21,7 +21,7 @@
     "create-app-definition": "contentful-app-scripts create-app-definition",
     "upload": "contentful-app-scripts upload --bundle-dir ./build",
     "upload-ci": "contentful-app-scripts upload --ci --bundle-dir ./build --organization-id $CONTENTFUL_ORG_ID --definition-id $CONTENTFUL_APP_DEF_ID --token $CONTENTFUL_ACCESS_TOKEN",
-    "open-playground": "export $(cat .env | xargs) && open 'http://localhost:3000/?token='$CONTENTFUL_ACCESS_TOKEN'&orgId='$CONTENTFUL_ORG_ID'&appId='$CONTENTFUL_APP_DEF_ID"
+    "open-playground": "source .env && open 'https://contentful-apps-playground.netlify.app/?token='$CONTENTFUL_ACCESS_TOKEN'&orgId='$CONTENTFUL_ORG_ID'&appId='$CONTENTFUL_APP_DEF_ID"
   },
   "eslintConfig": {
     "extends": "react-app"
